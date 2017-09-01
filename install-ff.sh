@@ -1,4 +1,4 @@
-
+#!/bin/bash
 INSTALL_FF_FOLDER=install-ff
 FLASHP_VERSION="26.0.0.151"
 FIREFOX_VERSION="55.0.3"
