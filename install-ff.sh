@@ -1,15 +1,17 @@
 #!/bin/bash
 INSTALL_FF_FOLDER=install-ff
-FLASHP_VERSION="26.0.0.151"
+FLASHP_VERSION="27.0.0.130"
 FIREFOX_VERSION="55.0.3"
 BASESYSTEM=$(uname -m) #Get the linux system
+
+#https://fpdownload.adobe.com/get/flashplayer/pdc/27.0.0.130/flash_player_npapi_linux.x86_64.tar.gz
 
 if [ ! -d ./$INSTALL_FF_FOLDER ]; then
 	mkdir ./$INSTALL_FF_FOLDER
 fi
 
 echo "Downloading Flash Player Plugin..."
-wget -P ./$INSTALL_FF_FOLDER https://fpdownload.adobe.com/pub/flashplayer/pdc/$FLASHP_VERSION/flash_player_ppapi_linux.$BASESYSTEM.tar.gz
+wget -P ./$INSTALL_FF_FOLDER https://fpdownload.adobe.com/get/flashplayer/pdc/$FLASHP_VERSION/flash_player_ppapi_linux.$BASESYSTEM.tar.gz
 
 echo "Downloading Firefox..."
 wget -P ./$INSTALL_FF_FOLDER https://download-installer.cdn.mozilla.net/pub/firefox/releases/$FIREFOX_VERSION/linux-$BASESYSTEM/pt-BR/firefox-$FIREFOX_VERSION.tar.bz2
